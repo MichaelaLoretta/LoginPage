@@ -24,24 +24,36 @@ struct ContentView: View {
             
             LinearGradient(colors: [.white, Color.indigo.opacity(0.5)], startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
-//            VStack{
-//
-//            Star(points: 5, innerRatio: 0.6)
-//                .fill(Color.white)
-//                .frame(width:100)
-//                .blur(radius: 5)
-//
-//            Star(points: 5, innerRatio: 0.6)
-//                    .stroke(lineWidth: 10)
-//                    .frame(width:200)
-//                    .blur(radius: 4)
-//
-//
+            VStack{
+
+            Circle()
+                    .frame(width: 100)
+                    .foregroundColor(.white)
+                    .blur(radius: 4)
+                    .offset(x: -80, y: 30)
+                
+                Spacer()
+
+                Circle()
+                        .frame(width: 200)
+                        .foregroundColor(.indigo)
+                        .blur(radius: 4)
+                        .offset(x: 80, y: -30)
+                
+                Spacer()
+                
+                Circle()
+                        .frame(width: 250)
+                        .foregroundColor(.white)
+                        .blur(radius: 4)
+                        .offset(x:-50, y: -30)
+
+
 //            Star(points: 5, innerRatio: 0.6)
 //                .fill(Color.indigo)
 //                .frame(width:300)
 //                .blur(radius: 5)
-//        }
+        }
             //--------------HEADER----------------
             
             VStack(spacing: 20){
@@ -105,7 +117,7 @@ struct ContentView: View {
                     
                     
                     Button("Sign Up", action: {})
-                        .foregroundColor(.white)
+                        .foregroundColor(.indigo)
                         .font(.system(size: 25, design: .rounded))
                         .padding(.vertical)
                 }
